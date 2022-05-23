@@ -4,7 +4,6 @@
 const countries = ["Japón", "Nicaragua", "Suiza", "Australia", "Venezuela"];
 
 const unordenlist = document.createElement("ul");
-document.body.append(unordenlist);
 
 for (let index = 0; index < countries.length; index++) {
   const contentList = document.createElement("li");
@@ -13,11 +12,17 @@ for (let index = 0; index < countries.length; index++) {
   contentList.appendChild(textContent);
 }
 
+document.body.append(unordenlist);
+
 // 1.2 Elimina el elemento que tenga la clase .fn-remove-me.
+
+const remove = document.querySelector(".fn-remove-me");
+document.body.removeChild(remove);
 
 // 1.3 Utiliza el array para crear dinamicamente una lista ul > li de elementos
 // en el div de html con el atributo data-function="printHere".
-// const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola'];
+
+const cars = ["Mazda 6", "Ford fiesta", "Audi A4", "Toyota corola"];
 
 // 1.4 Crea dinamicamente en el html una lista de div que contenga un elemento
 // h4 para el titulo y otro elemento img para la imagen.
