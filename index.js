@@ -24,6 +24,19 @@ document.body.removeChild(remove);
 
 const cars = ["Mazda 6", "Ford fiesta", "Audi A4", "Toyota corola"];
 
+const divBody = document.querySelector('div[data-function="printHere"]');
+const unordenlist1 = document.createElement("ul");
+divBody.appendChild(unordenlist1);
+
+for (let index = 0; index < cars.length; index++) {
+  const contentList1 = document.createElement("li");
+  unordenlist1.appendChild(contentList1);
+  const textContent1 = document.createTextNode(cars[index]);
+  contentList1.appendChild(textContent1);
+}
+
+document.body.append(unordenlist);
+
 // 1.4 Crea dinamicamente en el html una lista de div que contenga un elemento
 // h4 para el titulo y otro elemento img para la imagen.
 // const countries = [
